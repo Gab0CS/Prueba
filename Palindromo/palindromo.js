@@ -1,9 +1,9 @@
 const palindromo = (frase) =>{
-    const longitud =  frase.length();
-    for (let i = 0; longitud / 2; i++){
-        resta = longitud -1 - i;
-        if(frase(i) !== frase[longitud - resta])
-            return "No es palíndromo.";
+    const l =  frase.length;
+    for (let i = 0; l / 2; i++){
+        if(frase[i] !== frase[l -1 - i]){
+            console.log("No es palíndromo");
+        }
     }
-    return "Es palíndromo"
+    console.log("Es palídromo.");
 };
