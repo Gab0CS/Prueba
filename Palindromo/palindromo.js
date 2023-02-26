@@ -1,9 +1,11 @@
 const palindromo = (frase) =>{
-    const l =  frase.length;
-    for (let i = 0; l / 2; i++){
-        if(frase[i] !== frase[l -1 - i]){
-            console.log("No es palíndromo");
+    let reducir = /[^A-Za-z0-9]/g;
+    fraseProcesada = frase.toLowerCase().replace(reducir, '');
+    let long =  fraseProcesada.length;
+    for(let i = 0; i < long / 2; i++){
+        if(fraseProcesada[i]!== fraseProcesada[long -1 - i]){
+            return 'No es palíndromo';
         }
     }
-    console.log("Es palídromo.");
+    return 'Es palíndromo';
 };
