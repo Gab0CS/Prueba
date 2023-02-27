@@ -1,3 +1,21 @@
+const textInput = document.querySelector(".inputs input");
+const boton = document.querySelector(".inputs button");
+const displayResultado = document.querySelector(".resultado");
+
+
+boton.addEventListener("click", () =>{
+    displayResultado.innerHTML = palindromo(filtro);
+});
+
+textInput.addEventListener("keyup", () => {
+    filtro = textInput.value;
+    if(filtro){
+        return boton.classList.add("active");
+    }
+    boton.classList.remove("active");
+});
+
+
 const palindromo = (frase) =>{
     let reducir = /[^A-Za-z0-9]/g;
     fraseProcesada = frase.toLowerCase().replace(reducir, '');
