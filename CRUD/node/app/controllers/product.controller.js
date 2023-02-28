@@ -109,7 +109,7 @@ exports.delete = (req, res) => {
         })
         .catch(err => {
         res.status(500).send({
-            message: "No fue posible eliminar el tutorial con el id=" + id
+            message: "No fue posible eliminar el producto con el id=" + id
         });
         });
 };
