@@ -20,6 +20,7 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT || 8080;
+require("./app/routes/turorial.routes")(app);
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 });
